@@ -4063,9 +4063,9 @@ __webpack_require__.r(__webpack_exports__);
 //  Test 3
 //const ambiente = 'http://sproveedor-test-tres.adacsc.co/sg-sst/';
 //  Pre
-//const ambiente = 'https://test-positiva-webservice-proveedor-pre.adacsc.co/sg-sst/';
+const ambiente = 'https://test-positiva-webservice-proveedor-pre.adacsc.co/sg-sst/';
 //  Producción
-const ambiente = 'https://sproveedor.adacsc.co/sg-sst/';
+//const ambiente = 'https://sproveedor.adacsc.co/sg-sst/';
 const environment = {
     production: true,
     API_AUTH: ambiente + 'UsuarioSumServicio/login_app_sum',
