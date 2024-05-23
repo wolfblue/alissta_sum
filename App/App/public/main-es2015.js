@@ -4068,6 +4068,10 @@ const ambiente = 'https://test-positiva-webservice-proveedor-pre.adacsc.co/sg-ss
 //const ambiente = 'https://sproveedor.adacsc.co/sg-sst/';
 const environment = {
     production: true,
+    //  Pre
+    RECUPERAR_PASSWORD: 'https://positiva.adacsc.co/SUM/AdminUsuariosSum/RecuperarClaveSUM',
+    //  Producción
+    //RECUPERAR_PASSWORD: 'https://alissta.gov.co/SUM/AdminUsuariosSum/RecuperarClaveSUM',
     API_AUTH: ambiente + 'UsuarioSumServicio/login_app_sum',
     API_GET_BRANCH_OFFICE_EVENT: ambiente + 'Evento/Buscar-Sucursales',
     API_GET_MUNICIPY_BRANCH_OFFICE_EVENT: ambiente + 'Evento/Buscar-Municipio',
@@ -4095,7 +4099,6 @@ const environment = {
     API_CAMBIAR_ESTADO_USUARIO: ambiente + 'Comunicaciones/Comunicaciones-Cambiar-Estado-Usuario',
     API_LISTAR_EMPRESAS_MIGRADAS: ambiente + 'MigrarEmpresa/Obtener_Empresas_Migrar',
     API_GUARDAR_EMPRESA_MIGRADA: ambiente + 'MigrarEmpresa/Guardar-ActaActualizacionEmpresa',
-    RECUPERAR_PASSWORD: 'https://alissta.gov.co/SUM/AdminUsuariosSum/RecuperarClaveSUM',
     ONE_SIGNAL_SENDER_ID: '1023388241846',
     ONE_SIGNAL_APP_ID: 'af2757e0-1095-4476-84d2-298ee2b5bb5c',
 };

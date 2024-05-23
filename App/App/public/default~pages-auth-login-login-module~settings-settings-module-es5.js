@@ -12548,6 +12548,23 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
         this.storageService = storageService;
         this.toastController = toastController;
         this.oneSignal = oneSignal;
+        this.options = {
+          location: 'yes',
+          hidden: 'no',
+          clearcache: 'yes',
+          clearsessioncache: 'yes',
+          zoom: 'yes',
+          hardwareback: 'yes',
+          mediaPlaybackRequiresUserAction: 'no',
+          shouldPauseOnSuspend: 'no',
+          closebuttoncaption: 'Cerrar',
+          disallowoverscroll: 'no',
+          toolbar: 'yes',
+          enableViewportScale: 'no',
+          allowInlineMediaPlayback: 'no',
+          presentationstyle: 'fullscreen',
+          fullscreen: 'yes'
+        };
         /**
          * Cadenas de texto para la ventana de alerta de calificación de la aplicación.
          */
@@ -12660,8 +12677,8 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
          */
 
       }, {
-        key: "rateApp",
-        value: function rateApp() {
+        key: "rateAppOld",
+        value: function rateAppOld() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
@@ -12786,6 +12803,12 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
           } else {
             this.toastAutologin('¡Autologin activado!');
           }
+        }
+      }, {
+        key: "rateApp",
+        value: function rateApp() {
+          var url = 'https://apps.apple.com/us/app/alissta-sum/id1534224945';
+          this.iab.create(url, '_blank', this.options);
         }
       }]);
 

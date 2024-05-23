@@ -7275,6 +7275,23 @@ class SettingsPage {
         this.storageService = storageService;
         this.toastController = toastController;
         this.oneSignal = oneSignal;
+        this.options = {
+            location: 'yes',
+            hidden: 'no',
+            clearcache: 'yes',
+            clearsessioncache: 'yes',
+            zoom: 'yes',
+            hardwareback: 'yes',
+            mediaPlaybackRequiresUserAction: 'no',
+            shouldPauseOnSuspend: 'no',
+            closebuttoncaption: 'Cerrar',
+            disallowoverscroll: 'no',
+            toolbar: 'yes',
+            enableViewportScale: 'no',
+            allowInlineMediaPlayback: 'no',
+            presentationstyle: 'fullscreen',
+            fullscreen: 'yes',
+        };
         /**
          * Cadenas de texto para la ventana de alerta de calificación de la aplicación.
          */
@@ -7376,7 +7393,7 @@ class SettingsPage {
      * Muestra una ventana de diálogo que le permite al usuario calificar la aplicación en el mercado
      * de aplicaciones.
      */
-    rateApp() {
+    rateAppOld() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.appRate.setPreferences({
                 storeAppURL: this.RATE_APP_IDS,
@@ -7441,6 +7458,10 @@ class SettingsPage {
         else {
             this.toastAutologin('¡Autologin activado!');
         }
+    }
+    rateApp() {
+        let url = 'https://apps.apple.com/us/app/alissta-sum/id1534224945';
+        this.iab.create(url, '_blank', this.options);
     }
 }
 SettingsPage.NOTIFICATIONS_KEY = 'notifications';
