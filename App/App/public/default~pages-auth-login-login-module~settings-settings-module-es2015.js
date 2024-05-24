@@ -7460,8 +7460,23 @@ class SettingsPage {
         }
     }
     rateApp() {
-        let url = 'https://apps.apple.com/us/app/alissta-sum/id1534224945';
-        this.iab.create(url, '_blank', this.options);
+        var userAgent = navigator.userAgent;
+        var dispositivo = "ios";
+        if (userAgent.split("Android").length > 1) {
+            dispositivo = "android";
+        }
+        if (dispositivo == "android") {
+            this.appRate.setPreferences({
+                storeAppURL: this.RATE_APP_IDS,
+                customLocale: this.RATE_APP_TEXTS,
+                simpleMode: true,
+            });
+            this.appRate.promptForRating(true);
+        }
+        else {
+            let url = 'https://apps.apple.com/us/app/alissta-sum/id1534224945';
+            this.iab.create(url, '_blank', this.options);
+        }
     }
 }
 SettingsPage.NOTIFICATIONS_KEY = 'notifications';
